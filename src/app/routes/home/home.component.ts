@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Dancer } from '../../tools/baila.model';
+
 
 @Component({
   // tslint:disable-next-line:component-selector
@@ -7,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+
+  public dancers: Dancer[] = [];
 
   constructor() { }
 
