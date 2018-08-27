@@ -5,6 +5,14 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: './routes/home/home.module#HomeModule'
+  },
+  {
+    path: 'dancers',
+    loadChildren: './routes/dancers/dancers.module#DancersModule'
+  },
+  {
+    path: 'rhythms',
+    loadChildren: './routes/rhythms/rhythms.module#RhythmsModule'
   }
 ];
 

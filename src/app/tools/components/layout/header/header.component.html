@@ -2,9 +2,15 @@
   <mat-toolbar fxLayoutGap="0.5%" fxLayout='row' fxLayout.xs="column" 
               fxLayoutAlign="space-around center"
               color="primary">
-    <a fxFlex='25%' mat-button routerLink="">Proba Premiun</a>
-    <a fxFlex='25%' mat-button routerLink="">Tienda</a>
-    <a fxFlex='25%' mat-button routerLink="">Iniciar sesion</a>
-    <a fxFlex='25%' mat-button routerLink="">Registrarse</a>
+    <button fxFlex='20%' mat-button [matMenuTriggerFor]="menu">Administracion</button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item routerLink="dancers">Bailarines</button>
+        <button mat-menu-item routerLink="rhythms">Ritmos</button>
+        
+    </mat-menu>
+    <a fxFlex='20%' mat-button routerLink="">Proba Premiun</a>
+    <a fxFlex='20%' mat-button routerLink="">Tienda</a>
+    <a fxFlex='20%' mat-button routerLink="">Iniciar sesion</a>
+    <a fxFlex='20%' mat-button routerLink="">Registrarse</a>
   </mat-toolbar>
 </header>

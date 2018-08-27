@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Dancer } from '../../tools/baila.model';
+import { Rhythm } from '../../tools/baila.model';
 
 
 @Component({
@@ -10,7 +10,7 @@ import { Dancer } from '../../tools/baila.model';
 })
 export class HomeComponent implements OnInit {
 
-  public dancers: Dancer[] = [];
+  public rhythms: Rhythm[] = [];
 
   constructor() { }
 
