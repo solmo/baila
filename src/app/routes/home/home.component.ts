@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Rhythm } from '../../tools/baila.model';
+import { RhythmsService } from '../../services/rhythms.service';
+import { Observable } from 'rxjs';
+
 
 
 @Component({
@@ -10,11 +13,16 @@ import { Rhythm } from '../../tools/baila.model';
 })
 export class HomeComponent implements OnInit {
 
-  public rhythms: Rhythm[] = [];
+  public rhythms: Observable<Rhythm[]>;
 
-  constructor() { }
+  constructor( private rhythmsService: RhythmsService ) { }
 
   ngOnInit() {
+    this.rhythms = this.rhythmsService.getRhythms();
+  }
+
+  OnMatCardClickEvent(rhythm) {
+    console.log(rhythm.id);
   }
 
 }
