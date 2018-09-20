@@ -3,13 +3,14 @@ import { CommonModule } from '@angular/common';
 import { DancersRoutingModule } from './dancers-routing.module';
 import { DancersComponent } from './dancers.component';
 import { MyprimengModule } from '../../tools/myprimeng.module';
-import { Dancer } from '../../tools/baila.model';
+import { FormsModule} from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
     DancersRoutingModule,
-    MyprimengModule
+    MyprimengModule,
+    FormsModule
   ],
   declarations: [DancersComponent]
 })

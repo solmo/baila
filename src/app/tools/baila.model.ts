@@ -7,7 +7,7 @@ export interface Dancer {
     instagram: string,
     facebok: string
   };
-  rhythms?: Rhythm[];
+  rhythms?: string[];
 }
 
 // tslint:disable-next-line:class-name
@@ -18,10 +18,10 @@ export interface Rhythm {
 
 }
 
-export interface Video {
+export interface Channel {
   id?: string;
+  videoId?: string;
   dancerId?: string;
+  rhythmId?: string;
   title?: string;
-  picture?: any;
-  url?: string;
 }

@@ -1,12 +1,12 @@
 <header class="container">
-  <mat-toolbar fxLayoutGap="0.5%" fxLayout='row' fxLayout.xs="column" 
+  <mat-toolbar fxLayoutGap="0.5%" fxLayout='row' fxLayout.xs="column"
               fxLayoutAlign="space-around center"
               color="primary">
     <button fxFlex='20%' mat-button [matMenuTriggerFor]="menu">Administracion</button>
       <mat-menu #menu="matMenu">
         <button mat-menu-item routerLink="dancers">Bailarines</button>
         <button mat-menu-item routerLink="rhythms">Ritmos</button>
-        
+        <button mat-menu-item routerLink="channels">Canales</button>
     </mat-menu>
     <a fxFlex='20%' mat-button routerLink="">Proba Premiun</a>
     <a fxFlex='20%' mat-button routerLink="">Tienda</a>

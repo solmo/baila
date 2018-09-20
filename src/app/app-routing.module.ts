@@ -13,7 +13,12 @@ const routes: Routes = [
   {
     path: 'rhythms',
     loadChildren: './routes/rhythms/rhythms.module#RhythmsModule'
+  },
+  {
+    path: 'channels',
+    loadChildren: './routes/channels-admin/channels-admin.module#ChannelsAdminModule'
   }
+
 ];
 
 @NgModule({

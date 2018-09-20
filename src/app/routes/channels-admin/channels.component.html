@@ -1,12 +1,12 @@
-<p-table      [columns]="cols" [value]="dancers | async"
+<p-table      [columns]="cols" [value]="channels | async"
                 selectionMode="single"
-                [(selection)]="selectedDancer"
+                [(selection)]="selectedChannel"
                 (onRowSelect)="onRowSelect($event)"
                 [paginator]="true" [rows]="10"
                 [responsive]="true" >
 
     <ng-template pTemplate="caption">
-      Administracion de Bailarines
+      Administracion de Canales
     </ng-template>
 
     <ng-template pTemplate="header" let-columns>
@@ -34,45 +34,55 @@
     </ng-template>
   </p-table>
 
-  <p-dialog header="Bailarin" [(visible)]="displayDialog"
+  <p-dialog header="Canales" [(visible)]="displayDialog"
             [responsive]="true" showEffect="fade" [modal]="true"
             [width]="600" [height]="710">
-    <div class="ui-g ui-fluid" *ngIf="dancer">
+    <div class="ui-g ui-fluid" *ngIf="channel">
         <div class="ui-g-12">
             <div class="ui-g-4">
-                <label for="name">Nombre</label>
+                <label for="title">Titulo</label>
             </div>
             <div class="ui-g-8">
-                <input type="text" pInputText id="name" [(ngModel)]="dancer.name"/>
-            </div>
-        </div>
-        <div class="ui-g-12">
-            <div class="ui-g-4">
-                <label for="photo">Foto</label>
-            </div>
-            <div class="ui-g-8">
-                <input pInputText id="photo" [(ngModel)]="dancer.photo" />
+                <input type="text" pInputText id="title" [(ngModel)]="channel.title"/>
             </div>
         </div>
         <div class="ui-g-12">
           <div class="ui-g-4">
-              <label for="rhythms">Ritmos</label>
+              <label for="videoId">Codigo</label>
           </div>
           <div class="ui-g-8">
-              <p-multiSelect [options]="rhythmsOptions | async" xt id="rhythms"
-                             [(ngModel)]="dancer.rhythms"
-                             [panelStyle]="{minWidth:'12em'}">
-              </p-multiSelect>
+              <input type="text" pInputText id="videoId" [(ngModel)]="channel.videoId"/>
+          </div>
+        </div>
+        <div class="ui-g-12">
+            <div class="ui-g-4">
+                <label for="">Bailarin</label>
+            </div>
+            <div class="ui-g-8">
+              <p-listbox [options]="dancersOptions | async" [(ngModel)]="channel.dancerId"
+                [optionLabel]="name">
+              </p-listbox>
+            </div>
+        </div>
+        <div class="ui-g-12">
+          <div class="ui-g-4">
+              <label for="">Ritmo</label>
+          </div>
+          <div class="ui-g-8">
+            <p-listbox [options]="rhythmsOptions | async" [(ngModel)]="channel.rhythmId"
+              [optionLabel]="name">
+            </p-listbox>
           </div>
       </div>
+
     </div>
 
     <p-footer>
         <div class="ui-dialog-buttonpane ui-helper-clearfix">
-            <button *ngIf="!newDancer" type="button" pButton icon="fa-close" class="ui-button-danger"
-                    (click)="delDancer()" label="Eliminar"></button>
+            <button *ngIf="!newChannel" type="button" pButton icon="fa-close" class="ui-button-danger"
+                    (click)="delChannel()" label="Eliminar"></button>
             <button type="button" pButton icon="fa-check"
-                    (click)="saveDancer()" label="Guardar"></button>
+                    (click)="saveChannel()" label="Guardar"></button>
         </div>
     </p-footer>
   </p-dialog>

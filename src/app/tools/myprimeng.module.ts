@@ -7,6 +7,8 @@ import {CardModule} from 'primeng/card';
 import {PanelModule} from 'primeng/panel';
 import {InputTextModule} from 'primeng/inputtext';
 import { DialogModule } from 'primeng/dialog';
+import { MultiSelectModule } from 'primeng/multiselect';
+import { ListboxModule } from 'primeng/listbox';
 
 @NgModule({
   imports: [
@@ -20,7 +22,9 @@ import { DialogModule } from 'primeng/dialog';
     CardModule,
     PanelModule,
     InputTextModule,
-    DialogModule
-            ]
+    DialogModule,
+    MultiSelectModule,
+    ListboxModule
+  ]
 })
 export class MyprimengModule { }
