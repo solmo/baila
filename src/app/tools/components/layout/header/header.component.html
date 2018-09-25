@@ -1,3 +1,5 @@
+
+
 <header class="container">
   <mat-toolbar fxLayoutGap="0.5%" fxLayout='row' fxLayout.xs="column"
               fxLayoutAlign="space-around center"
@@ -6,11 +8,31 @@
       <mat-menu #menu="matMenu">
         <button mat-menu-item routerLink="dancers">Bailarines</button>
         <button mat-menu-item routerLink="rhythms">Ritmos</button>
-        <button mat-menu-item routerLink="channels">Canales</button>
+        <button mat-menu-item routerLink="channels-admin">Canales</button>
     </mat-menu>
-    <a fxFlex='20%' mat-button routerLink="">Proba Premiun</a>
     <a fxFlex='20%' mat-button routerLink="">Tienda</a>
     <a fxFlex='20%' mat-button routerLink="">Iniciar sesion</a>
     <a fxFlex='20%' mat-button routerLink="">Registrarse</a>
   </mat-toolbar>
 </header>
+
+<!--
+<p-toolbar >
+  <div class="p-grid ">
+    <div class="p-col">
+      <p-menu #menu [popup]="true" [model]="items"></p-menu>
+      <button type="button" pButton icon="pi pi-bars" label="Administracion"
+              (click)="menu.toggle($event)"></button>
+    </div>
+    <div class="p-col">
+        <a pButton type="button" label="Tienda" routerLink="" icon="pi pi-plus"></a>
+    </div>
+    <div class="p-col">
+        <a pButton type="button" label="Iniciar Sesion" routerLink="" icon="pi pi-plus"></a>
+    </div>
+    <div class="p-col">
+        <a pButton type="button" label="Registrarse" routerLink="" icon="pi pi-plus"></a>
+    </div>
+  </div>
+</p-toolbar>
+-->

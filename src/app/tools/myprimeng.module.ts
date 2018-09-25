@@ -9,6 +9,7 @@ import {InputTextModule} from 'primeng/inputtext';
 import { DialogModule } from 'primeng/dialog';
 import { MultiSelectModule } from 'primeng/multiselect';
 import { ListboxModule } from 'primeng/listbox';
+import { MenuModule } from 'primeng/menu';
 
 @NgModule({
   imports: [
@@ -24,7 +25,8 @@ import { ListboxModule } from 'primeng/listbox';
     InputTextModule,
     DialogModule,
     MultiSelectModule,
-    ListboxModule
+    ListboxModule,
+    MenuModule
   ]
 })
-export class MyprimengModule { }
+export class MyPrimeNgModule { }

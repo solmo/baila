@@ -8,12 +8,12 @@ import { RhythmsService } from '../../services/rhythms.service';
 
 @Component({
   // tslint:disable-next-line:component-selector
-  selector: 'ba-channels',
-  templateUrl: './channels.component.html',
-  styleUrls: ['./channels.component.css']
+  selector: 'ba-channels-admin',
+  templateUrl: './channels-admin.component.html',
+  styleUrls: ['./channels-admin.component.css']
 })
 
-export class ChannelsComponent implements OnInit {
+export class ChannelsAdminComponent implements OnInit {
   cols: any[];
   channel: Channel = {
     dancerId: '',
@@ -67,6 +67,7 @@ export class ChannelsComponent implements OnInit {
 
   saveChannel() {
     if (this.newChannel) {
+        // arreglar id de referencias
         this.channelsService.addChannel(this.channel);
     } else {
         this.channelsService.updateChannel(this.channel);

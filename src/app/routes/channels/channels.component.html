@@ -1,0 +1,20 @@
+
+
+<div class="p-grid p-justify-center" p-nogutter p-align-center>
+  <div class="p-col-12">
+    <h2 class="mat-display-1" >Canales destacados</h2>
+  </div>
+  <div class="p-col-12">
+    <div class="p-grid p-justify-center">
+        <mat-card  *ngFor="let channel of channels | async"
+                (click)="OnMatCardClickEvent(channel)">
+
+              <youtube-player
+                [videoId]="channel.videoId"
+                (ready)="savePlayer($event)"
+                (change)="onStateChange($event)"
+              ></youtube-player>
+         </mat-card>
+    </div>
+  </div>
+</div>

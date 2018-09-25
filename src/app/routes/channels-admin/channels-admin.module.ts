@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ChannelsAdminRoutingModule } from './channels-admin-routing.module';
-import { ChannelsComponent } from './channels.component';
+import { ChannelsAdminComponent } from './channels-admin.component';
 import { FormsModule} from '@angular/forms';
-import { MyprimengModule } from '../../tools/myprimeng.module';
+import { MyPrimeNgModule } from '../../tools/myprimeng.module';
 
 @NgModule({
   imports: [
     CommonModule,
     ChannelsAdminRoutingModule,
-    MyprimengModule,
+    MyPrimeNgModule,
     FormsModule
   ],
-  declarations: [ChannelsComponent]
+  declarations: [ChannelsAdminComponent]
 })
 export class ChannelsAdminModule { }

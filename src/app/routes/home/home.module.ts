@@ -8,8 +8,8 @@ import { ComponentsModule } from '../../tools/components/components.module';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    ComponentsModule
-  ],
+    ComponentsModule,
+    ],
   declarations: [HomeComponent]
 })
 export class HomeModule { }

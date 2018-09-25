@@ -15,10 +15,13 @@ const routes: Routes = [
     loadChildren: './routes/rhythms/rhythms.module#RhythmsModule'
   },
   {
-    path: 'channels',
+    path: 'channels-admin',
     loadChildren: './routes/channels-admin/channels-admin.module#ChannelsAdminModule'
+  },
+  {
+    path: 'channels',
+    loadChildren: './routes/channels/channels.module#ChannelsModule'
   }
-
 ];
 
 @NgModule({

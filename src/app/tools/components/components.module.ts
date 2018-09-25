@@ -10,6 +10,7 @@ import { MatToolbarModule, MatSidenavModule, MatButtonModule, MatChipsModule,
          MatSelectModule, MatMenuModule } from '@angular/material';
 import { FooterComponent } from './layout/footer/footer.component';
 import { RouterModule } from '@angular/router';
+import { MyPrimeNgModule } from '../myprimeng.module';
 
 @NgModule({
   imports: [
@@ -34,7 +35,8 @@ import { RouterModule } from '@angular/router';
     MatDatepickerModule,
     MatNativeDateModule,
     MatSelectModule,
-    MatMenuModule
+    MatMenuModule,
+    MyPrimeNgModule
   ],
   declarations: [HeaderComponent, FooterComponent],
   exports: [

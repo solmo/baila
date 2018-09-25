@@ -1,15 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ChannelsAdminComponent } from './channels-admin.component';
+import { ChannelsComponent } from './channels.component';
 
 const routes: Routes = [
   {
-    path: '',
-    component: ChannelsAdminComponent
+  path: ':rhythmId',
+  component: ChannelsComponent
   }
 ];
+
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class ChannelsAdminRoutingModule { }
+export class ChannelsRoutingModule { }
